@@ -7,7 +7,7 @@ import os
 data_directory= 'ISL_DATA'
 os.makedirs(data_directory, exist_ok=True)
 
-signs=["hello", "thank you", "A", "B"]
+signs=["hello", "thank you", "A", "B", "GOLU"]
 for sign in signs:
     os.makedirs(os.path.join(data_directory, sign), exist_ok=True)
 
@@ -30,7 +30,7 @@ while cap.isOpened():
     # Display instructions on the frame
     cv2.putText(frame, "Press key to collect data for a sign...", (10, 30), 
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
-    cv2.putText(frame, "h: hello | t: thankyou | a: A | b: B | q: quit", (10, 60), 
+    cv2.putText(frame, "h: hello | t: thankyou | a: A | b: B |g :GOLU| q: quit", (10, 60), 
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
     # ... (MediaPipe processing and drawing landmarks is the same) ...
@@ -50,6 +50,8 @@ while cap.isOpened():
             sign_to_save = "A"
            elif key == ord('b'):
             sign_to_save = "B"
+           elif key == ord('g'):
+            sign_to_save = "GOLU"
 
            if sign_to_save:
                 # Extract landmarks

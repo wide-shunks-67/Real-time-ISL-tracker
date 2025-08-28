@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 import pickle
 
 # Path to the directory where you saved your data
-DATA_PATH = "ISL_data"
+DATA_PATH = "ISL_Data"
 
 # Lists to hold the data and labels
 data = []
