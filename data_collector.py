@@ -7,7 +7,7 @@ import os
 data_directory= 'ISL_DATA'
 os.makedirs(data_directory, exist_ok=True)
 
-signs=["hello", "thank you", "A", "B", "GOLU"]
+signs=["hello", "thank you", "A", "B", "Golu"]
 for sign in signs:
     os.makedirs(os.path.join(data_directory, sign), exist_ok=True)
 
